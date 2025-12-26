@@ -14,16 +14,19 @@ Ta có thể giải bài này bằng cách chia thành các trường hợp
 
 - Trường hợp 1: lô `A` - loại `I`, lô `B` - loại `II`:
 Khi đó xác suất để lấy được sản phẩm loại `I` sẽ là
+  
 $$P_1 =\dfrac{10}{12}\times\dfrac{4}{20} \times \dfrac{1}{2} = \dfrac{1}{12}$$
 
 - Trường hợp 2: lô `A` - loại `II`, lô `B` - loại `I`
 Khi đó xác suất để lấy được sản phẩm loại `I` sẽ là
+  
 $$P_2 = \dfrac{2}{12} \times \dfrac{16}{20} \times \dfrac{1}{2} = \dfrac{1}{15}$$
+
 - Trường hợp 3: cả 2 lô đều bốc được loại `I`
 Khi đó xác suất để lấy được sản phẩm loại `I` sẽ là
 $$P_3 = \dfrac{10}{12}\times \dfrac{16}{20}\times 1 = \dfrac{2}{3}$$
-
 **Vậy xác suất để lấy ra được một sản phẩm loại 1 là**
+  
 $$P = \sum P_i = P_1 + P_2 + P_3 = \dfrac{1}{12} + \dfrac{1}{15} + \dfrac{2}{3} \approx 0.8167$$
 
 Như vậy không có đáp án nào trong đề thoả mãn.
