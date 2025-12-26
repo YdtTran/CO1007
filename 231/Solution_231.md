@@ -56,3 +56,70 @@ Từ đề bài ta có:
 Ta cần tính giá trị $P(A|B)$. Theo định lý `Bayes` ta có:
   
 $$P(A|B) = \dfrac{P(B|A) \times P(A)}{P(B|A) \times P(A)+P(B|\overline{A}) \times P(\overline{A})} = \dfrac{\frac{40}{500}\times\frac{1}{2}}{\frac{40}{500}\times\frac{1}{2}+\frac{25}{200}\times\frac{1}{2}} \approx 0.39$$
+
+Đáp án: **C**.
+
+---
+
+**Câu 3.** Cho một cây nhị phân có kết quả duyệt tiền thứ tự (pre-order) là ICHAGKBDFJЕ, và hậu thứ tự (post-order) là HGKACFJDЕBI. Kết quả duyệt trung thứ tự (in-order) của cây là:
+
+A. HCGKAIFJDBE  
+B. HCGKAFJDBIE  
+C. HCGAIKFDJBE  
+D. HGCAKIFDJBE
+
+**Lời giải:**
+Từ duyệt tiền thứ tự và hậu thứ tự, ta có thể thấy được rằng `I` là root của cây nhị phân và có các con là `C` và `B`.
+
+```mermaid
+flowchart TD
+    I((I)) --> C((C))
+    I((I)) --> B((B))
+```
+
+Từ đây, ta thực hiện chia nhỏ bài toán để giải quyết hiệu quả hơn. Đối với đỉnh `C`, ta thấy rằng nó có thể kề với hai đỉnh là `H` và `A`.
+
+- Vì đỉnh `H` đứng đầu trong post-order, do đó nó không thể có các lá.
+- Đối với nhánh còn lại, dễ dàng nhận thấy `A` sẽ kề với `G` và `K`
+
+```mermaid
+flowchart TD
+    I((I)) --> C((C))
+    I((I)) --> B((B))
+    C --> H((H))
+    C --> A((A))
+    A --> G((G))
+    A--> K((K))
+```
+
+Đối với nhánh chứa đỉnh B, ta thấy rằng `D` và `E` sẽ là hai đỉnh kề với `B`.
+
+- Vì `E` nằm cuối pre-order, do đó `E` sẽ không có lá.
+- Vì `F` kề với `D` trong pre-order, `J` kề với `D` trong post-order, do đó `D` sẽ có hai lá là `F` và `J`
+
+```mermaid
+flowchart TD
+    I((I)) --> C((C))
+    I((I)) --> B((B))
+    C --> H((H))
+    C --> A((A))
+    A --> G((G))
+    A--> K((K))
+    B --> D((D))
+    B --> E((E))
+    D --> F((F))
+    D --> J((J))
+```
+
+Từ cây trên, ta có thể dễ dàng duyệt trung thứ tự (in-order) để có kết quả là: `HCGAKIFDJBE`
+
+---
+
+**Câu 4.** Với cây thu được, đâu là kết quả của duyệt cây theo chiều rộng? (BFS)
+
+A. IHACBDEGKFJ  
+B. ICBHADEFJGK  
+C. ICHBADEGKFJ  
+D. ICBHADEGKFJ
+
+**Lời giải:**
