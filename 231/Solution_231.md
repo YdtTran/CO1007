@@ -51,4 +51,6 @@ Từ đề bài ta có:
 - $P(B|\overline{A}) = \frac{25}{200}$
 
 Ta cần tính giá trị $P(A|B)$. Theo định lý `Bayes` ta có:
-\[P(A|B) = \dfrac{P(B|A) \times P(A)}{P(B|A) \times P(A)+P(B|\overline{A}) \times P(\overline{A})} = \dfrac{\frac{40}{500}\times\frac{1}{2}}{\frac{40}{500}\times\frac{1}{2}+\frac{25}{200}\times\frac{1}{2}} \approx 0.39\]
+$$
+P(A|B) = \dfrac{P(B|A) \times P(A)}{P(B|A) \times P(A)+P(B|\overline{A}) \times P(\overline{A})} = \dfrac{\frac{40}{500}\times\frac{1}{2}}{\frac{40}{500}\times\frac{1}{2}+\frac{25}{200}\times\frac{1}{2}} \approx 0.39
+$$
